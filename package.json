@@ -1,0 +1,24 @@
+{
+  "name": "form_component_test",
+  "version": "1.0.0",
+  "description": "automated test for FormComponent project which create by React Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/cucumber/bin/cucumber.js --format pretty"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.0.0",
+    "chai-as-promised": "^6.0.0",
+    "colors": "^1.0.3",
+    "cucumber": "^2.2.0",
+    "grunt": "^1.0.1",
+    "grunt-cucumberjs": "^1.0.1",
+    "mocha": "^3.4.2",
+    "q": "^1.5.0",
+    "sinon": "^2.3.2",
+    "sinon-chai": "^2.10.0",
+    "wd": "^1.2.0"
+  }
+}

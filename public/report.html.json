@@ -1,0 +1,85 @@
+[
+  {
+    "description": "  เพื่อที่จะทดสอบแบบ BDD ได้อย่างถูกต้อง\n  ในฐานะ นักทดสอบ\n  ผมต้องการที่จะทดสอบระบบแบบ end-to-end ด้วย mobile simulator",
+    "keyword": "ความต้องการทางธุรกิจ",
+    "line": 2,
+    "name": "สร้างสภาพแวดล้อมสำหรับทดสอบแบบ BDD",
+    "tags": [],
+    "uri": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/input_text.feature",
+    "elements": [
+      {
+        "keyword": "เหตุการณ์",
+        "line": 8,
+        "name": "เพิ่มชื่อ",
+        "tags": [],
+        "id": "สร้างสภาพแวดล้อมสำหรับทดสอบแบบ-bdd;เพิ่มชื่อ",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 25903
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/step_definitions/nametext_steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "กำหนดให้ ",
+            "name": "ผมเปิด Appium Test Server",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 9,
+            "match": {
+              "location": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/step_definitions/nametext_steps.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "เมื่อ ",
+            "name": "พิมพ์ \"Tanakorn\" เข้าไปใน textbox \"name\"",
+            "result": {
+              "status": "passed",
+              "duration": 1469
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/step_definitions/nametext_steps.js:28"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "ดังนั้น ",
+            "name": "ควรจะเห็น \"Tanakorn\" ปรากฎใน textbox \"name\"",
+            "result": {
+              "status": "passed",
+              "duration": 5
+            },
+            "line": 11,
+            "match": {
+              "location": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/step_definitions/nametext_steps.js:33"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After",
+            "result": {
+              "status": "passed",
+              "duration": 473
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/him_aeng/Sites/Experiment/FormComponentTest/features/step_definitions/nametext_steps.js:20"
+            }
+          }
+        ]
+      }
+    ],
+    "id": "สร้างสภาพแวดล้อมสำหรับทดสอบแบบ-bdd"
+  }
+]
