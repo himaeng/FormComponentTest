@@ -13,3 +13,14 @@ Scenario Outline: เพิ่มชื่อ
     | Tanakorn | 0830664647 |
     | Dump     | 08306xxxxx |
     | Pone     | 08306yyyyy |
+
+Scenario Outline: เพิ่มอีเมล์
+  Given ผู้ใช้ที่ชื่อว่า <name> และมีโทรศัพท์คือ <phone>
+  When กรอก <email>
+  Then ต้องเห็น <name>, <phone> และ <email>
+
+  Examples:
+    | name     | phone      | email             |
+    | Tanakorn | 0830664647 | tanakorn@test.com |
+    | Dump     | 08306xxxxx | dump@test.com     |
+    | Pone     | 08306yyyyy | pone@test.com     |

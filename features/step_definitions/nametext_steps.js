@@ -11,6 +11,7 @@ defineSupportCode(function({Given, When, Then, After, Before}) {
   let driver;
   let nameText;
   let phoneText;
+  let emailText;
   let userTable;
 
   Before({timeout: 300 * 1000}, function () {
@@ -27,14 +28,31 @@ defineSupportCode(function({Given, When, Then, After, Before}) {
     return driver.should.exist;
   });
 
+  Given('ผู้ใช้ที่ชื่อว่า {name} และมีโทรศัพท์คือ {phone}',
+    (nameValue, phoneValue) => {
+      nameText = driver.elementById('name');
+      phoneText = driver.elementById('phone');
+      return Promise.all([
+        nameText.type(nameValue),
+        phoneText.type(phoneValue)
+      ]);
+    }
+  );
+
   When('พิมพ์ {name} และพิมพ์ {phone}',
-  (namevalue, phonevalue) => {
-    nameText = driver.elementById('name');
-    phoneText = driver.elementById('phone');
-    return Promise.all([
-      nameText.type(namevalue),
-      phoneText.type(phonevalue)
-    ]);
+    (nameValue, phoneValue) => {
+      nameText = driver.elementById('name');
+      phoneText = driver.elementById('phone');
+      return Promise.all([
+        nameText.type(nameValue),
+        phoneText.type(phoneValue)
+      ]);
+    }
+  );
+
+  When('กรอก {email}', (emailValue) => {
+    emailText = driver.elementById('email');
+    return emailText.type(emailValue);
   });
 
   Then('ควรจะเห็น {name} และ {phone}',
@@ -43,4 +61,12 @@ defineSupportCode(function({Given, When, Then, After, Before}) {
     phoneText.getValue().should.become(phone);
     return;
   });
+
+  Then('ต้องเห็น {name}, {phone} และ {email}',
+    (name, phone, email) => {
+      nameText.getValue().should.become(name);
+      phoneText.getValue().should.become(phone);
+      emailText.getValue().should.become(email);
+    }
+  );
 });
